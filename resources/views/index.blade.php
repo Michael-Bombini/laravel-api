@@ -17,6 +17,10 @@
     <a class="btn btn-primary btn-bool mt-5" href="{{ route('login') }}">
         GET STARTED
     </a>
+    <br>
+    <a class="btn btn-primary btn-bool mt-5" href="{{ route('public') }}">
+        PUBLIC AREA
+    </a>
 
 </div>
     
