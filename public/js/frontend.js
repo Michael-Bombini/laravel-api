@@ -1912,9 +1912,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      posts: []
+    };
+  },
   mounted: function mounted() {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/Api/posts').then(function (resp) {
+    var _this = this;
+
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/posts").then(function (resp) {
       console.log(resp.data);
+      _this.posts = resp.data;
     });
   }
 });
@@ -1936,7 +1944,35 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div");
+  return _c("div", [_c("div", {
+    staticClass: "container mt-5"
+  }, [_c("div", {
+    staticClass: "row"
+  }, _vm._l(_vm.posts, function (post) {
+    return _c("div", {
+      key: post.id,
+      staticClass: "col-4"
+    }, [_c("div", {
+      staticClass: "post shadow h-100"
+    }, [_c("img", {
+      staticClass: "img-fluid",
+      attrs: {
+        alt: "Image of the post " + post.title
+      }
+    }), _vm._v(" "), _c("div", {
+      staticClass: "p-3 mb-3"
+    }, [_c("div", {
+      staticClass: "title"
+    }, [_vm._v(_vm._s(post.title))]), _vm._v(" "), _c("div", {
+      staticClass: "description"
+    }, [_vm._v(_vm._s(post.description))]), _vm._v(" "), _c("div", {
+      staticClass: "row"
+    }, [_c("div", {
+      staticClass: "col-6 author"
+    }, [_vm._v(_vm._s(post.id))]), _vm._v(" "), _c("div", {
+      staticClass: "col-6"
+    }, [_vm._v(_vm._s(post.user_id))])])])])]);
+  }), 0)])]);
 };
 
 var staticRenderFns = [];
