@@ -1,0 +1,47 @@
+.main-title , .sub-title , .bp-logo {
+    color: #2373BA;
+}
+
+.sub-title {
+    font-size: 1.4rem;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.bp-logo {
+    font-size: 8rem;
+    font-weight: bold;
+    border: 2px dashed lightskyblue;
+    border-radius: 50%;
+    width: 190px;
+    height: 190px;
+    text-align: center;
+    line-height: 190px;
+}
+
+.btn-bool {
+    background-color: #2373BA;
+    font-weight: bold;
+}
+
+
+.btn-manage {
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+
+i.fa-4x {
+    color: #2176bd;
+}
+
+
+#app {
+    background-color: #EBF0FC;
+    height: 100vh;
+}
